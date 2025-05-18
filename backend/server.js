@@ -66,6 +66,6 @@ app.get('/', (req, res) => {
     </div>`);
 })
 
-app.get("/api/healthcheck", (req, res) => {
-  res.json({ status: "OK", message: "Server is running" });
+app.get('/api/healthcheck', (req, res) => {
+  res.status(200).json({ message: 'Server is healthy' });
 });
