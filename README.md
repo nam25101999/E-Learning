@@ -31,7 +31,6 @@ Nền tảng được xây dựng trên **MERN stack** gồm ReactJS, NodeJS, Mo
 - **Backend:** Node.js, Express.js  
 - **Database:** MongoDB  
 - **Cloud Storage:** Cloudinary (quản lý media)  
-- **Thanh toán:** Razorpay
 
 ---
 
