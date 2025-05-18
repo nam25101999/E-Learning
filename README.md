@@ -1,245 +1,176 @@
+# TrollStudy 📝
 
-<img  height="70" src='https://learnhub-opju.netlify.app/images/logo2.svg' />
+TrollStudy là một nền tảng giáo dục trực tuyến (ed-tech) đầy đủ chức năng, cho phép người dùng tạo, học tập và đánh giá các nội dung giáo dục.  
+Nền tảng được xây dựng trên **MERN stack** gồm ReactJS, NodeJS, MongoDB và ExpressJS.
 
-# Project Description 📝
-LearnHub is a fully functional ed-tech platform that enables users to create, consume, and rate educational content. <br/>
-The platform is built using the **MERN stack**, which includes ReactJS, NodeJS, MongoDB, and ExpressJS.
+## Mục Lục
 
+| Section                  | Mô tả                                                |
+|--------------------------|-----------------------------------------------------|
+| [TrollStudy Aim](#TrollStudy-aim)             | 📚 Mục tiêu và định hướng của TrollStudy             |
+| [Tech Stack](#tech-stack)                 | 💻🔧 Các công nghệ sử dụng                         |
+| [System Architecture](#system-architecture)     | 🏰 Tổng quan kiến trúc hệ thống                    |
+| [Architecture Diagram](#architecture-diagram)     | 🏗️ Sơ đồ kiến trúc                                 |
+| [Schema](#schema)                         | 🗂 Giải thích các schema dữ liệu                   |
+| [React Hooks](#react-hooks)               | 🎣 Các React Hooks sử dụng                          |
+| [React Library](#react-library)           | ⚛️📚 Các thư viện React được dùng                   |
+| [Screen Preview](#screen-preview)         | 🖥️ Xem trước các màn hình ứng dụng                  |
 
-<h2>Live link 🌍📡 - [  https://learnhub-opju.vercel.app/  ]</h2>
-<hr/>
+---
 
+## TrollStudy Aim 📚
 
-<img width='100%' src='https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/home.png' />
+1️⃣ Tạo trải nghiệm học tập liền mạch và tương tác, giúp học sinh tiếp cận giáo dục dễ dàng và thú vị hơn.  
+2️⃣ Cung cấp nền tảng cho giảng viên thể hiện chuyên môn và kết nối với người học trên toàn cầu.
 
+---
 
+## Tech Stack 💻🔧
 
-## Table of Contents
+- **Frontend:** ReactJS, Redux, React Router, Axios, React Hook Form  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB  
+- **Cloud Storage:** Cloudinary (quản lý media)  
+- **Thanh toán:** Razorpay
 
-
-| Section                 | Description                                  |
-|-------------------------|----------------------------------------------|
-| [LearnHub](#LearnHub-aim-)        | 📚 Overview of LearnHub goals            |
-| [Tech Stack](#tech-stack-)             | 💻🔧 Technologies used in the project         |
-| [System Architecture](#system-architecture-)    | 🏰 Overview of the system architecture      |
-| [Architecture Diagram](#architecture-diagram-)   | 🏗️ Diagram illustrating the architecture   |
-| [Schema](#schema-)                  | 🗂 Explanation of data schemas used          |
-| [React Hooks](#react-hooks-)            | 🎣 Overview of React Hooks utilized          |
-| [React Library](#react-library-)         | ⚛️📚 Overview of React Libraries used        |
-| [Screen Preview](#screen-preview-)         | 🖥️ Screen Preview        |
-
-
-
-
-
-
-## LearnHub Aim 📚 
-<br/>
-1️⃣ A seamless and interactive learning experience for students, making education more accessible and engaging.<br/>
-2️⃣ A platform for instructors to showcase their expertise and connect with learners across the globe.<br/>
-
-<br/>
-<br/>
-<img width='100%' src='https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/gif.gif' />
-
-
-## Tech Stack 💻🔧 
-
-## Frontend 🎨 : 
-<code title="React.js"><img height="40" src="https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/React.png"></code>
-<code title="Vite"><img height="40" src="https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/Vitejs-logo.png"></code>
-<code title="Redux.js"><img height="35" src="https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/redux-logo.png"></code>
-<code title="css"><img height="40" src="https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/css%20logo.png"></code>
-<code title="Tailwind css"><img height="35" src="https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/tailwind%20css%20logo.png"></code>
-
-
-## Backend ⚙️ :
-<code title="Nodejs"><img height="50" src="https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/nodejs-logo.png"></code>
-<code title="Express"><img height="70" src="https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/express%20logo.png"></code>
-
-
-## Database 🛢️ :
-<code title="Mongodb"><img height="40" src="https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/mongodb%20logo.png"></code>
-
-## Cloudinary Integration ☁️
-<code title="Mongodb"><img height="40" src="https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/cloudinary-logo.jpg"></code>
-
-<hr/>
-
-
-
+---
 
 ## System Architecture 🏰
-<br/>
-☝ The LearnHub ed-tech platform consists of three main components:  <br/>
-The front end, the back end, and the database. The platform follows a client-server architecture, with the front end serving as the client and the back end and database serving as the server.
 
-🎨 Front-end  <br/>
-The front end of the platform is built using ReactJS, which is a popular JavaScript library for building user interfaces. ReactJS allows for the creation of dynamic and responsive user interfaces also **Loading Skeleton**, which are critical for providing an engaging learning experience to the students. The front end communicates with the back end using RESTful API calls.
+TrollStudy gồm 3 thành phần chính:
 
-⚙️ Back-end  <br/>
-The back end of the platform is built using NodeJS and ExpressJS, which are popular frameworks for building scalable and robust server-side applications. The back end provides APIs for the front end to consume, which include functionalities such as user authentication, course creation, and course consumption. The back end also handles the logic for processing and storing the course content and user data.
+### 🎨 Frontend
 
-🛢️ Database  <br/>
-The database for the platform is built using MongoDB, which is a NoSQL database that provides a flexible and scalable data storage solution. MongoDB allows for the storage of unstructured and semi-structured data, which is useful for storing course content such as videos, images, and PDFs. The database stores the course content, user data, and other relevant information related to the platform.
+- Xây dựng bằng ReactJS, tạo giao diện người dùng động và tương tác cao.  
+- Sử dụng kỹ thuật **Loading Skeleton** giúp trải nghiệm người dùng mượt mà.  
+- Giao tiếp với backend qua các RESTful API.
 
+### ⚙️ Backend
 
+- Sử dụng Node.js và Express.js xây dựng server, cung cấp API cho frontend.  
+- Xử lý logic như xác thực người dùng, quản lý khóa học, lưu trữ và xử lý dữ liệu.  
+- Tích hợp thanh toán qua Razorpay và lưu trữ media bằng Cloudinary.
+
+### 🛢️ Database
+
+- MongoDB cung cấp lưu trữ dữ liệu linh hoạt, phù hợp với dữ liệu phi cấu trúc như video, ảnh, tài liệu.  
+- Lưu trữ thông tin khóa học, người dùng, và các dữ liệu liên quan khác.
+
+---
 
 ## Architecture Diagram 🏗️
-<br/>
-Here is a high-level diagram that illustrates the architecture of the LearnHub ed-tech platform:
-<img width='60%' src='https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/Architecture%20Diagram.png' />
 
+Sơ đồ tổng quan hệ thống TrollStudy gồm frontend, backend và database với luồng dữ liệu tương tác qua API REST.
 
-<hr/>
+---
 
-#### The front end of LearnHub has all the necessary pages that an ed-tech platform should have. Some of these pages are: 
+## Các Trang chính của TrollStudy
 
-For Students:
-- **Homepage 🏠:** A brief introduction to the platform with links to the course list user details and a random background.
-- **Course List 📚:** A list of all the courses available on the platform, along with their descriptions and ratings.
-- **Wishlist 💡:** Displays all the courses that a student has added to their wishlist.
-- **Cart Checkout 🛒 :** Allows the user to complete course purchases.
-- **Course Content 🎓:** Presents the course content for a particular course, including videos and related material.
-- **User Details 👤:** Provides details about the student's account, including their name, email, and other relevant information.
-- **User Edit Details ✏️:** Allows students to edit their account details.
+### Dành cho học viên:
 
-For Instructors:
-- **Dashboard 📊:** Offers an overview of the instructor's courses, along with ratings and feedback for each course.
-- **Insights 📈:** Provides detailed insights into the instructor's courses, including the number of views, clicks, and other relevant metrics.
-- **Course Management Pages 🛠️:** Enables instructors to create, update, and delete courses, as well as manage course content and pricing.
-- **View and Edit Profile Details 👀:** Allows instructors to view and edit their account details.
+- **Homepage 🏠:** Giới thiệu chung, link danh sách khóa học, thông tin cá nhân, nền động.  
+- **Course List 📚:** Danh sách tất cả khóa học, mô tả và đánh giá.  
+- **Wishlist 💡:** Khóa học được yêu thích và lưu lại.  
+- **Cart Checkout 🛒:** Thanh toán và hoàn tất đăng ký khóa học.  
+- **Course Content 🎓:** Nội dung khóa học, video và tài liệu liên quan.  
+- **User Details 👤:** Thông tin tài khoản học viên.  
+- **User Edit Details ✏️:** Cho phép học viên chỉnh sửa thông tin cá nhân.
 
+### Dành cho giảng viên:
 
+- **Dashboard 📊:** Tổng quan khóa học, đánh giá, phản hồi.  
+- **Insights 📈:** Thống kê lượt xem, lượt nhấp và các chỉ số khác.  
+- **Course Management 🛠️:** Tạo, chỉnh sửa, xóa khóa học và nội dung.  
+- **View and Edit Profile Details 👀:** Quản lý thông tin cá nhân giảng viên.
 
-### Back-end ⚙️
+---
 
-The back-end of the platform is built using NodeJS and ExpressJS, providing APIs for the front-end to consume. These APIs include functionalities such as user authentication, course creation, and course consumption. The back-end also handles the logic for processing and storing the course content and user data.
+## Backend Features ⚙️
 
-#### Back-end Features
+- **Xác thực & phân quyền 🔐:** Đăng ký, đăng nhập, xác thực OTP, quên mật khẩu.  
+- **Quản lý khóa học 🛠️:** CRUD khóa học và nội dung, đánh giá khóa học.  
+- **Thanh toán 💳:** Học viên thanh toán qua Razorpay để đăng ký khóa học.  
+- **Quản lý media ☁️:** Sử dụng Cloudinary để lưu trữ ảnh, video, tài liệu.  
+- **Định dạng Markdown ✍️:** Nội dung tài liệu khóa học được lưu dưới dạng Markdown, dễ hiển thị trên frontend.
 
-- **User Authentication and Authorization 🔐:** Students and instructors can sign up and log in to the platform using their email addresses and passwords. The platform also supports OTP (One-Time Password) verification and forgot password functionality for added security.
-- **Course Management 🛠️:** Instructors can create, read, update, and delete courses, as well as manage course content and media. Students can view and rate courses.
-- **Payment Integration 💳:** Students will purchase and enroll in courses by completing the checkout flow, followed by Razorpay integration for payment handling.
-- **Cloud-based Media Management ☁️ :** TrollCode uses Cloudinary, a cloud-based media management service, to store and manage all media content, including images, videos, and documents.
-- **Markdown Formatting ✍️:** Course content in document format is stored in Markdown format, allowing for easier display and rendering on the front-end.
+---
 
+## Data Models & Database Schema 📋
 
+- **Student Schema 🧑‍🎓:** Thông tin học viên (tên, email, mật khẩu, khóa học).  
+- **Instructor Schema 👩‍🏫:** Thông tin giảng viên (tên, email, mật khẩu, khóa học).  
+- **Course Schema 📚:** Thông tin khóa học (tên, mô tả, giảng viên, media).
 
-#### Data Models and Database Schema
-
-The back-end of TrollCode uses several data models and database schemas to manage data, including:
-
-- **Student Schema 🧑‍🎓:** Includes fields such as name, email, password, and course details for each student.
-- **Instructor Schema 👩‍🏫:** Includes fields such as name, email, password, and course details for each instructor.
-- **Course Schema 📚:** Includes fields such as course name, description, instructor details, and media content.
-
-
-### Database 🛢️
-The database for the platform is built using MongoDB, a NoSQL database that provides a flexible and scalable data storage solution. MongoDB allows for the storage of unstructured and semi-structured data. The database stores the course content, user data, and other relevant information related to the platform.
-
-## Schema 📋
-<img width='100%' src='https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/Schema.png' />
-
-<hr/>
-
+---
 
 ## React Hooks 🎣
 
-Utilized several React hooks for efficient state management and dynamic behavior:
+Sử dụng các hooks phổ biến để quản lý trạng thái và hiệu ứng:
 
-- `useState`
-- `useEffect`
-- `useDispatch`
-- `useParams`
-- `useSelector`
-- `useLocation`
-- `useNavigate`
-- `useRef`
-- `useForm`
-- `useDropzone`
-- `Custom-Hook`
+- `useState`, `useEffect`, `useDispatch`, `useSelector`, `useNavigate`, `useParams`, `useLocation`, `useRef`  
+- Hooks tùy chỉnh và các thư viện hỗ trợ như `useForm`, `useDropzone`.
 
-<br/>
+---
 
-## 📚 **React Library**:
+## React Libraries 📚
 
-- 🚀 **Lazy Loading**: Enhance performance by lazily loading images using the react-lazy-load-image library.
-- 📊 **Chart.js:**  Versatile charting library for creating interactive and visually appealing charts.
-- 🎭**Framer Motion:**  Animation library for React, providing smooth and expressive motion.
-- 📁 **React Dropzone:**  Drag-and-drop file uploader for React applications.
-- 🍞 **React Hot Toast:**  Elegant and customizable toast notifications for React applications.
-- 🔢 **React OTP Input:**  Input component for one-time password entry in React forms.
-- 📊 **React Super Responsive Table:**  Highly responsive and feature-rich table component for React.
-- 🔄 **Swiper:**  Modern touch slider for mobile and desktop browsers.
-- 🖋️ **React Type Animation:**  Simple and configurable typing animation component for React.
-- 🎥 **Video React:**  React-based video player for building rich multimedia experiences in web applications.
+- **React Lazy Load Image:** Tăng hiệu suất tải ảnh.  
+- **Chart.js:** Biểu đồ tương tác.  
+- **Framer Motion:** Hiệu ứng hoạt hình.  
+- **React Dropzone:** Upload file kéo thả.  
+- **React Hot Toast:** Thông báo toast đẹp mắt.  
+- **React OTP Input:** Nhập mã OTP.  
+- **React Super Responsive Table:** Bảng dữ liệu responsive.  
+- **Swiper:** Slider tương tác.  
+- **React Type Animation:** Hiệu ứng gõ chữ.  
+- **Video React:** Trình phát video.
 
+---
 
 ## API Design
 
-The TrollCode platform's API is designed following the REST architectural style. The
-API is implemented using Node.js and Express.js. It uses JSON for data exchange and
-follows standard HTTP request methods such as GET, POST, PUT, and DELETE.
-Sample list of API endpoints and their functionalities: 
-1. /api/auth/signup (POST) - Create a new user (student or instructor) account.
-2. /api/auth/login (POST) – Log in using existing credentials and generate a JWT
-token.
-3. /api/auth/verify-otp (POST) - Verify the OTP sent to the user's registered email.
-4. /api/auth/forgot-password (POST) - Send an email with a password reset link to
-the registered email.
-5. /api/courses (GET) - Get a list of all available courses.
-6. /api/courses/:id (GET) - Get details of a specific course by ID.
-7. /api/courses (POST) - Create a new course.
-8. /api/courses/:id (PUT) - Update an existing course by ID.
-9. /api/courses/:id (DELETE) - Delete a course by ID.
-10. /api/courses/:id/rate (POST) - Add a rating (out of 5) to a course.
-Sample API requests and responses: 
-1. GET /api/courses: Get all courses
-   * Response: A list of all courses in the database
-2. GET /api/courses/:id: Get a single course by ID
-   * Response: The course with the specified ID
-3. POST /api/courses: Create a new course
-   * Request: The course details in the request body
-   * Response: The newly created course
-4. PUT /api/courses/:id: Update an existing course by ID
-   * Request: The updated course details in the request body
-   * Response: The updated course
-5. DELETE /api/courses/:id: Delete a course by ID
-   * Response: A success message indicating that the course has been deleted.
+Các API được thiết kế theo RESTful chuẩn, sử dụng JSON, với các phương thức GET, POST, PUT, DELETE:
 
+| Endpoint                      | Mô tả                                    |
+|------------------------------|-----------------------------------------|
+| POST `/api/auth/signup`       | Đăng ký người dùng (học viên hoặc giảng viên) |
+| POST `/api/auth/login`        | Đăng nhập, tạo JWT token                 |
+| POST `/api/auth/verify-otp`   | Xác thực mã OTP gửi qua email            |
+| POST `/api/auth/forgot-password` | Gửi email đặt lại mật khẩu             |
+| GET `/api/courses`            | Lấy danh sách tất cả khóa học            |
+| GET `/api/courses/:id`        | Lấy chi tiết khóa học theo ID             |
+| POST `/api/courses`           | Tạo mới khóa học                         |
+| PUT `/api/courses/:id`        | Cập nhật khóa học theo ID                 |
+| DELETE `/api/courses/:id`     | Xóa khóa học theo ID                      |
+| POST `/api/courses/:id/rate` | Đánh giá khóa học                         |
 
-##  🖥️ Screen Preview :
+---
 
-# Home Page Background 🏠 
-<img width='100%' src='https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/home.png' />
+## Screen Preview 🖥️
 
-# About Page
-<img width='100%' src='https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/about.png' />
+### Homepage 🏠  
+Trang giới thiệu nền tảng, các khóa học nổi bật và thông tin người dùng.
 
-# Contact Page
-<img width='100%' src='https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/contact.png' />
+### About Page  
+Giới thiệu chi tiết về TrollStudy và mục tiêu.
 
-# Ai Content Page
-<img width='100%' src='https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/AI%20content.png' />
+### Contact Page  
+Thông tin liên hệ hỗ trợ.
 
-# Footer
-<img width='100%' src='https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/footer.png' />
+### AI Content Page  
+Trang hỗ trợ nội dung tạo bởi AI.
 
-# 404 Page
-<img width='100%' src='https://github.com/BoddepallyVenkatesh06/LearnHub-E-Learning-Platform/blob/main/screenshots/404%20page.png' />
+### Footer  
+Thông tin bản quyền và liên kết.
 
+### 404 Page  
+Trang báo lỗi khi truy cập URL không hợp lệ.
 
+---
 
+Cảm ơn bạn đã quan tâm và trải nghiệm TrollStudy!  
+Nếu có thắc mắc hoặc góp ý, hãy liên hệ với chúng tôi.
 
+---
 
-
-
-
-
-
-
-
- 
-#   E - L e a r n i n g - P l a t f o r m  
- 
+*TrollStudy Team*  
