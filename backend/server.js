@@ -61,9 +61,9 @@ app.use('/api/v1/course', courseRoutes);
 app.get('/', (req, res) => {
     // console.log('Your server is up and running..!');
     res.send(`<div>
-    This is Default Route  
-    <p>Everything is OK</p>
-    </div>`);
+    Đây là chốn bình yên mặc định 🤘  
+    <p>Mọi thứ vẫn ổn... cho đến khi bạn chạm vào 😎</p>
+</div>`);
 })
 
 app.get('/api/healthcheck', (req, res) => {
